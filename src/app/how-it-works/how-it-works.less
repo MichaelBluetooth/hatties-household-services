@@ -1,13 +1,11 @@
+@import "../app-variables.less";
+
 .wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 475px;
+    height: 750px;
     margin-bottom: 25px;
-
-    h3 {
-        // margin-top: 12px;
-    }
 }
 
 .hit-header {
@@ -23,9 +21,9 @@
 
 .hit-list {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
 }
 
 .hit-item {
@@ -36,16 +34,34 @@
     height: 150px;
 }
 
-.divider {
-    position: relative;
-    top: 20px;
-    width: 225px;
-    height: 1px;
-    background-color: #ccc;
-    align-self: stretch;
+    .divider {
+        width: 225px;        
+        height: 1px;
+        margin-bottom: 10px;        
+        background-color: #ccc;        
+    }
+
+@media (min-width: @medium) {
+    .wrapper {
+        height: 475px;
+    }
+
+    .hit-list {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .divider {
+        position: relative;
+        top: 20px;
+        width: 225px;
+        height: 1px;
+        background-color: #ccc;
+        align-self: stretch;
+    }
 }
 
-.contact {    
+.contact {
     margin-top: 25px;
     display: flex;
     align-items: center;

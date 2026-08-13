@@ -1,5 +1,6 @@
+@import "../app-variables.less";
+
 .jumbotron-wrapper {
-    height: 100%;
     width: 100%;
     height: 325px;
     display: flex;
@@ -7,17 +8,29 @@
 }
 
 .jumbotron {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
-.jumbotron-content {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    width: 100%;
+
+@media (min-width: @medium) {
+    .jumbotron-wrapper {
+        height: 325px;
+    }
+
+    .jumbotron {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .jumbotron-content {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
 }
